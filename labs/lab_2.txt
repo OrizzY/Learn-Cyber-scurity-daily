@@ -1,0 +1,44 @@
+#hasil 1.
+ps aux | head -n 12
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+u0_a155   9317 12.9  5.6 1474508 104344 ?      Sl    1970   0:25 com.termux
+u0_a155   9674  0.0  0.1   9864  2592 pts/27   Ss    1970   0:00 /data/data/com.termux/files/usr/bin/bash -l
+u0_a155  10645  2.0  0.1   8296  2136 pts/27   R+    1970   0:00 ps aux
+u0_a155  10646  1.0  0.1  10728  2420 pts/27   S+    1970   0:00 head -n 12
+#hasil 2.
+~/lab/day_2 $ echo "line1" > a.txt && echo "line2" >> a.txt && cat a.txt
+line1
+line2
+#hasil 3.
+~/lab/day_2 $ ls /no/such/dir 2> err2.txt && cat err2.txt
+~/lab/day_2 $ cat err2.txt
+ls: cannot access '/no/such/dir': No such file or directory
+#hasil 4.
+~/lab/day_2 $ printf "192.168.1.5 up\n192.168.1.10 down\n" > sim_hosts.txt && cat sim_hosts.txt | grep "up" | awk '{print $1}'
+192.168.1.5
+#hasil 5.
+Tasks: 4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+  Mem:      1.7G total,      1.7G used,       33M free,      516K buffers
+ Swap:      1.0G total,      438M used,      586M free,      552M cached
+800%cpu   0%user   0%nice   0%sys 800%idle   0%iow   0%irq   0%sirq   0%host
+#hasil 6.
+~/lab/day_2 $ ps aux | grep termux | head -n 5
+u0_a155   9317 10.1  5.1 1481608 94608 ?       Sl    1970   1:12 com.termux
+u0_a155   9674  0.0  0.1   9864  1992 pts/27   Ss    1970   0:00 /data/data/com.termux/files/usr/bin/bash -l
+u0_a155  11080  0.0  0.1   8388  2168 pts/27   S+    1970   0:00 grep termux
+#hasil 7.
+~/lab/day_2 $ alias nn='nmap -sV' && nn --version || echo "nmap not installed"
+No command nn found, did you mean:
+ Command nm in package binutils
+ Command nm in package binutils-is-llvm
+ Command ln in package coreutils
+ Command gn in package gn
+ Command sn in package mono
+ Command ne in package ne
+ Command nc in package netcat-openbsd
+ Command nnn in package nnn
+ Command nu in package nushell
+ Command nx in package nxengine from the x11-repo repository
+ Command nns in package tcllib
+ Command sn in package tin-summer
+nmap not installed

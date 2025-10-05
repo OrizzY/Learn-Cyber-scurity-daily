@@ -1,0 +1,43 @@
+#hasil 1.
+~/lab/day_1 $ cd -
+/data/data/com.termux/files/home/lab                            ~/lab $ pwd
+/data/data/com.termux/files/home/lab                            ~/lab $ cd day_1
+~/lab/day_1 $ mkdir -p lab && cd lab                            ~/lab/day_1/lab $ pwd                                           /data/data/com.termux/files/home/lab/day_1/lab
+~/lab/day_1/lab $
+~ $ cd lab
+~/lab $ ls -a
+.  ..  day_1
+~/lab $ cd lab/day_1
+bash: cd: lab/day_1: No such file or directory
+~/lab $ cd day_1
+~/lab/day_1 $ ls -a                                             .  ..  .kuma.bash  lab
+~/lab/day_1 $
+#hasil 2.
+~/lab/day_1/lab $ echo "hello re" >note.txt
+~/lab/day_1/lab $ cat note.txt
+hello re
+~/lab/day_1/lab $
+#hasil 3.
+~/lab/day_1/lab $ mv note.txt note1.txt
+~/lab/day_1/lab $ cp note1.txt backup_note1.txt                 ~/lab/day_1/lab $ ls -a
+.  ..  backup_note1.txt  lab.txt  note1.txt 
+~/lab/day_1/lab $
+#hasil 4.
+~/lab/day_1/lab $ cat nofile.txt 2> err.txt                     ~/lab/day_1/lab $ cat err.txt                                   cat: nofile.txt: No such file or directory
+~/lab/day_1/lab $
+#hasil 5.
+~/lab/day_1/lab $ for i in {1..5}; do echo "file $i" > file$i.txt; done
+ls -la
+total 43
+drwx------. 2 u0_a155 u0_a155 3488 Oct  1 16:40 .
+drwx------. 3 u0_a155 u0_a155 3488 Oct  1 16:30 ..
+-rw-------. 1 u0_a155 u0_a155    9 Oct  1 16:35 backup_note1.txt
+-rw-------. 1 u0_a155 u0_a155   43 Oct  1 16:37 err.txt         -rw-------. 1 u0_a155 u0_a155    7 Oct  1 16:40 file1.txt
+-rw-------. 1 u0_a155 u0_a155    7 Oct  1 16:40 file2.txt
+-rw-------. 1 u0_a155 u0_a155    7 Oct  1 16:40 file3.txt
+-rw-------. 1 u0_a155 u0_a155    7 Oct  1 16:40 file4.txt
+-rw-------. 1 u0_a155 u0_a155    7 Oct  1 16:40 file5.txt
+-rw-------. 1 u0_a155 u0_a155 1126 Oct  1 16:40 lab.txt
+-rw-------. 1 u0_a155 u0_a155    9 Oct  1 16:33 note1.txt
+~/lab/day_1/lab $
+
