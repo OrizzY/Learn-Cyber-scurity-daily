@@ -1,0 +1,53 @@
+2: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    inet 192.168.0.102/24 brd 192.168.0.255 scope global dynamic noprefixroute wlan0
+default via 192.168.0.1 dev wlan0 proto dhcp src 192.168.0.102 metric 600 
+192.168.0.0/24 dev wlan0 proto kernel scope link src 192.168.0.102 metric 600 
+Netid State  Recv-Q Send-Q                     Local Address:Port Peer Address:Port
+udp   UNCONN 0      0      [fe80::4a89:e7ff:fe49:a363]%wlan0:546          [::]:*   
+#hasil 3.\n sudo netstat -tulnp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+udp6       0      0 fe80::4a89:e7ff:fe4:546 :::*                                704/NetworkManager  
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-09 08:01 WIB
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000065s latency).
+
+PORT     STATE  SERVICE      VERSION
+22/tcp   closed ssh
+80/tcp   closed http
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3306/tcp closed mysql
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.61 seconds
+# Nmap done at Thu Oct  9 08:04:09 2025 -- 256 IP addresses (3 hosts up) scanned in 2.27 seconds
+HTTP/1.1 200 OK
+Date: Thu, 09 Oct 2025 01:05:28 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Go ahead and ScanMe!</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2A0D45">
+<link rel="preload" as="image" href="/images/sitelogo.png" imagesizes="168px" imagesrcset="/images/sitelogo.png, /images/sitelogo-2x.png 2x">
+<link rel="preload" as="image" href="/shared/images/nst-icons.svg">
+<link rel="stylesheet" href="/shared/css/nst.css?v=2">
+<script async src="/shared/js/nst.js?v=2"></script>
+
+echo -e "HEAD / HTTP/1.0\r\n\r\n" | nc -vz scanme.nmap.org 80 | head -n 10
+scanme.nmap.org [45.33.32.156] 80 (http) open
+:22 closed
+:80 closed
+:443 closed
+:135 closed
+:139 closed
+:445 closed
+:3389 closed

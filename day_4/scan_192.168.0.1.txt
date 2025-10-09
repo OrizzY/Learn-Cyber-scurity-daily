@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Tue Oct  7 11:56:00 2025 as: /usr/lib/nmap/nmap --privileged -Pn -sT -p 22,80 --open -oN scan_192.168.0.1.txt 192.168.0.1
+Nmap scan report for 192.168.0.1
+Host is up (0.0051s latency).
+Not shown: 1 filtered tcp port (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Tue Oct  7 11:56:02 2025 -- 1 IP address (1 host up) scanned in 1.27 seconds

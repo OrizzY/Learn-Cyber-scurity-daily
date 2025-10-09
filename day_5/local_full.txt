@@ -1,0 +1,7 @@
+# Nmap 7.95 scan initiated Thu Oct  9 07:57:48 2025 as: /usr/lib/nmap/nmap --privileged -sT -p- -T4 -oN local_full.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00022s latency).
+All 65535 scanned ports on localhost (127.0.0.1) are in ignored states.
+Not shown: 65535 closed tcp ports (conn-refused)
+
+# Nmap done at Thu Oct  9 07:57:51 2025 -- 1 IP address (1 host up) scanned in 3.14 seconds
